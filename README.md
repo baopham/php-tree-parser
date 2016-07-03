@@ -18,7 +18,7 @@ Parse this:
            |- Level 4
 ```
 
-to:
+to this:
 
 ```php
 foreach ($root->children as $child) {
@@ -63,6 +63,20 @@ TREE;
 $parser = new BaoPham\TreeParser($tree);
 
 $root = $parser->parse();
+
+foreach ($root->children as $child) {
+    print $child->name;
+
+    print $child->order;
+
+    print $child->level;
+
+    print_r($child->children);
+
+    print_r($child->children[0]->children);
+
+    print $child->children[0]->parent === $child;
+}
 ```
 
 ## Change log
