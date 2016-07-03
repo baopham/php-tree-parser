@@ -107,6 +107,10 @@ class TreeParser
         return $this;
     }
 
+    /**
+     * @param TreeNode $node
+     * @return TreeNode|null
+     */
     public function getParentForNode(TreeNode $node)
     {
         if ($node->level === TreeNode::ROOT_LEVEL) {
@@ -128,11 +132,20 @@ class TreeParser
         }
     }
 
+    /**
+     * @param $line
+     * @return int
+     */
     private function numberOfSpaces($line)
     {
         return strspn($line, ' ');
     }
 
+    /**
+     * @param $numberOfSpaces
+     * @return int
+     * @throws InvalidNumberOfSpaces
+     */
     private function spacesToLevel($numberOfSpaces)
     {
         if ($numberOfSpaces === $this->initialSpaces) {
@@ -145,7 +158,7 @@ class TreeParser
             );
         }
 
-        return ($numberOfSpaces - $this->initialSpaces) / $this->initialSpaces;
+        return (int) ($numberOfSpaces - $this->initialSpaces) / $this->initialSpaces;
     }
 
     private function lineToNode($line)
@@ -161,7 +174,7 @@ class TreeParser
         return $node;
     }
 
-    private function setStructureAndOrderedNodes($lines)
+    private function setStructureAndOrderedNodes(array $lines)
     {
         $this->orderedNodes = [];
 
@@ -177,7 +190,7 @@ class TreeParser
                 $node->isRoot = true;
             }
 
-            $node->order = $order;
+            $node->order = (int) $order;
 
             $node->level = $this->spacesToLevel($this->numberOfSpaces($line));
 
