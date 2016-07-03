@@ -103,5 +103,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-scrutinizer]: https://scrutinizer-ci.com/g/baopham/tree-parser/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/baopham/tree-parser
 [link-downloads]: https://packagist.org/packages/baopham/tree-parser
-[link-author]: https://github.com/:author_username
+[link-author]: https://github.com/baopham
 [link-contributors]: ../../contributors
