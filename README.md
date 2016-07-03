@@ -1,6 +1,6 @@
 # tree-parser
 
-[![Latest Version on Packagist][ico-version]](https://packagist.org/packages/baopham/tree-parser)
+[![Latest Stable Version](https://poser.pugx.org/baopham/tree-parser/v/stable)](https://packagist.org/packages/baopham/tree-parser)
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/baopham/php-tree-parser.svg?branch=master)](https://travis-ci.org/baopham/php-tree-parser)
 [![Code Coverage](https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/baopham/php-tree-parser/?branch=master)
