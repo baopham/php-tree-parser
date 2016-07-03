@@ -60,10 +60,25 @@ TREE;
     {
         $tree = <<<TREE
   Root
-     |- Level 1 - Order 1
+   |- Level 1 - Order 1
 TREE;
         $parser = new TreeParser($tree);
 
         $parser->parse();
+    }
+
+    public function test_setting_custom_indentation()
+    {
+        $tree = <<<TREE
+  Root
+      |- Level 1 - Order 1
+TREE;
+        $parser = new TreeParser($tree);
+
+        $parser->setIndentation(4);
+
+        $root = $parser->parse();
+
+        $this->assertCount(1, $root->children);
     }
 }

@@ -4,7 +4,7 @@ namespace BaoPham\TreeParser;
 
 class TreeParser
 {
-    private $spaces = 2;
+    private $indentation = 2;
 
     /**
      * @var string
@@ -98,12 +98,12 @@ class TreeParser
     }
 
     /**
-     * @param int $spaces
+     * @param int $indentation
      * @return TreeParser
      */
-    public function setSpaces($spaces)
+    public function setIndentation($indentation)
     {
-        $this->spaces = $spaces;
+        $this->indentation = $indentation;
         return $this;
     }
 
@@ -152,13 +152,13 @@ class TreeParser
             return 0;
         }
 
-        if (($numberOfSpaces - $this->initialSpaces) % $this->spaces !== 0) {
+        if (($numberOfSpaces - $this->initialSpaces) % $this->indentation !== 0) {
             throw new InvalidNumberOfSpaces(
-                "Make sure children's leading spaces being a multiple of {$this->spaces}"
+                "Make sure children's leading spaces being a multiple of {$this->indentation}"
             );
         }
 
-        return (int) ($numberOfSpaces - $this->initialSpaces) / $this->initialSpaces;
+        return (int) ($numberOfSpaces - $this->initialSpaces) / $this->indentation;
     }
 
     private function lineToNode($line)

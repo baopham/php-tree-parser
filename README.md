@@ -47,6 +47,7 @@ $ composer require baopham/tree-parser
 ## Usage
 
 ``` php
+// A tree with 2 spaces for indentation
 $tree = <<<TREE
   Root
     |- Level 1 - Order 1
@@ -61,6 +62,8 @@ $tree = <<<TREE
 TREE;
 
 $parser = new BaoPham\TreeParser($tree);
+
+$parser->setIndentation(2); // number of spaces for an indentation, 2 is the default.
 
 $root = $parser->parse();
 
