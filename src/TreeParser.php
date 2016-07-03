@@ -128,7 +128,7 @@ class TreeParser
                 return $candidates[$order];
             }
 
-            $order--;
+            --$order;
         }
     }
 
