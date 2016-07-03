@@ -1,10 +1,10 @@
 # tree-parser
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Version on Packagist][ico-version]](https://packagist.org/packages/baopham/tree-parser)
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][https://travis-ci.org/baopham/php-tree-parser.svg?branch=master]
-[![Coverage Status][ico-scrutinizer]][https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/quality-score.png?b=master]
-[![Quality Score][ico-code-quality]][https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/coverage.png?b=master]
+[![Build Status][ico-travis]](https://travis-ci.org/baopham/php-tree-parser.svg?branch=master)
+[![Coverage Status][ico-scrutinizer]](https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/quality-score.png?b=master)
+[![Quality Score][ico-code-quality]](https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/coverage.png?b=master)
 
 Parse this:
 
