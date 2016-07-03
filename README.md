@@ -2,10 +2,9 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][https://travis-ci.org/baopham/php-tree-parser.svg?branch=master]
+[![Coverage Status][ico-scrutinizer]][https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/quality-score.png?b=master]
+[![Quality Score][ico-code-quality]][https://scrutinizer-ci.com/g/baopham/php-tree-parser/badges/coverage.png?b=master]
 
 Parse this:
 
@@ -86,7 +85,7 @@ If you discover any security related issues, please email :author_email instead 
 
 ## Credits
 
-- [Bao Pham][https://github.com/baopham]
+- [Bao Pham](https://github.com/baopham)
 
 ## License
 
