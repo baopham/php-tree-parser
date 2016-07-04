@@ -36,6 +36,16 @@ foreach ($root->children as $child) {
 }
 ```
 
+## Table of Content
+* [Install](#install)
+* [Usage](#usage)
+  * [Advanced](#advanced)
+* [Change log](#change-log)
+* [Testing](#testing)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [License](#license)
+
 ## Install
 
 Via Composer
@@ -82,6 +92,39 @@ foreach ($root->children as $child) {
 }
 ```
 
+### Advanced
+
+```php
+$tree = <<<TREE
+  Root
+    |- Level 1 - Order 1
+      |- Level 2 - Order 2
+        |- Level 3 - Order 3
+        |- Level 3 - Order 4
+      |- Level 2 - Order 5
+    |- Level 1 - Order 6
+      |- Level 2 - Order 7
+        |- Level 3 - Order 8
+          |- Level 4 - Order 9
+TREE;
+
+$parser = new BaoPham\TreeParser($tree);
+
+$parser->parse();
+
+$structure = $parser->getStructure();
+
+// Get nodes at level 3
+$level3Nodes = $structure[3];
+// Get node at level 3, order 4
+$node = $structure[3][4];
+
+// Get last leaf
+$orderedNodes = $parser->getOrderedNodes();
+$lastLeaf = $orderedNodes[count($orderedNodes) - 1];
+```
+
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -95,10 +138,6 @@ $ composer test
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
 
 ## Credits
 
