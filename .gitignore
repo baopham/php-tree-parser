@@ -2,3 +2,6 @@ build
 composer.lock
 docs
 vendor
+.idea
+.phpunit.cache/*
+.phpunit.result.cache

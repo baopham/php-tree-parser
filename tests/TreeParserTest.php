@@ -2,7 +2,9 @@
 
 namespace BaoPham\TreeParser;
 
-class TreeParserTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TreeParserTest extends TestCase
 {
     public function test_parsing_tree()
     {
@@ -53,11 +55,9 @@ TREE;
         $this->assertEquals($root, $lastItem->parent->parent->parent->parent);
     }
 
-    /**
-     * @expectedException \BaoPham\TreeParser\InvalidNumberOfSpaces
-     */
     public function test_validating_number_of_spaces()
     {
+        $this->expectException(InvalidNumberOfSpaces::class);
         $tree = <<<TREE
   Root
    |- Level 1 - Order 1
